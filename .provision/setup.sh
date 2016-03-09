@@ -38,5 +38,5 @@ echo "installing depdendencies"
 npm install
 
 echo "installing pm2"
-sudo pm2 start server.js -i 0 --name="api">
+sudo pm2 start server.js -i 0 --name="api"
 sudo pm2 list
