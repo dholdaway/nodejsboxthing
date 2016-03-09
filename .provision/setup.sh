@@ -14,11 +14,11 @@ echo "install nginx"
 echo "Configuring Nginx"
 
 # set up nginx server
+sudo rm /etc/nginx/sites-available/default
 sudo cp /home/vagrant/.provision/nginx/nginx.conf /etc/nginx/sites-available/site.conf
 sudo chmod 644 /etc/nginx/sites-available/site.conf
 sudo ln -s /etc/nginx/sites-available/site.conf /etc/nginx/sites-enabled/site.conf
 sudo service nginx restart
-
 
 echo "adding nodejs repo"
 	curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
